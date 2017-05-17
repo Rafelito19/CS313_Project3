@@ -1,17 +1,22 @@
 
+
+/*
+ * Project 3 CS313
+ * Maze solver /debugging
+ * by Rafael Santana 
+ *This class handles the file manipulation and 2d array printing
+*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
-
-
-
-
 public class Project3 {
 
-
+private static boolean found = false;
+private static int temp [][]=new int [10][10];
 public static void main (String [] args ){
 	
 	
@@ -25,8 +30,8 @@ public static void main (String [] args ){
 		    while ((line = br.readLine()) != null) {
 		   	 if (j>9){
 		   		 j=0;
-		   		 printM(numbers);
-		   		 solve_maze(numbers);
+		  Maze_Solver.solve_maze(numbers);
+		 		 printM(numbers);
 numbers = new int [10][10];
 continue;
 		   	 
@@ -64,10 +69,10 @@ System.out.println("invalid file provided");
 
 	
 }
-public static void solve_maze(int maze [] []){}
+
 
 public static void printM(int args[][])	{
-	System.out.println("The maze ");
+
 	System.out.println();
 	for (int i =0; i <args.length;i++){
 		
@@ -79,6 +84,9 @@ public static void printM(int args[][])	{
 		System.out.println();
 	}
 	System.out.println();
+	
+	
+	
 }
 
 
